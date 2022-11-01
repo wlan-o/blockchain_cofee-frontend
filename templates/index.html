@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        #order_form{
+            position: absolute;
+            left:7%
+        }
+        #request_status{
+            position: absolute;
+            left: 47%;
+        }
+        body{
+            background-color: #e7dddc;
+            /*background-image: url("https://img2.reactor.cc/pics/post/full/Pop-Cat-%D0%9C%D0%B5%D0%BC%D1%8B-%D0%BA%D0%BE%D1%84%D0%B5-6575076.jpeg");*/
+        }
+        h4,h1,p{
+            padding: 10px;
+            background-color: #784f39;
+            color: whitesmoke;
+            border: 1px;
+            border-radius: 10px 10px 10px 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Кофе оптом</title>
+</head>
+<body link="whitesmoke" alink="whitesmoke" vlink="whitesmoke">
+<!--    <img src="https://img2.reactor.cc/pics/post/full/Pop-Cat-%D0%9C%D0%B5%D0%BC%D1%8B-%D0%BA%D0%BE%D1%84%D0%B5-6575076.jpeg" alt="coffee1.jpeg" width="1920">-->
+    <h4>
+        <a href="/">
+        --*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе
+        -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе -*- кофе
+        -*- кофе -*-- </a>
+    </h4>
+    <br><br><br>
+    <div id="order_form">
+        <h1>
+            Форма заказа кофе
+        </h1>
+        <br>
+        <form name="size" action="" method="post" onsubmit="">
+            <p> Измерять количество по: <br>
+                <input type="radio" id="ordertype_pcs" name="radioo" value="pcs"> <label for="ordertype_pcs">упаковкам</label>
+                <input type="radio" id="ordertype_weight" name="radioo" value="weight"> <label for="ordertype_weight"> весу</label>
+                <br>
+            </p>
+            <p>Укажите объем:
+                <input type="text" id="get_pcs" name="amount">
+            </p>
+            <p> Введите дату отправки: <br>
+                <input type="text" id="send_date" name="send" value="ММ.ДД.ГГГГ">
+                <br>
+            Введите дату доставки: <br>
+                <input type="text" id="delivery_date" name="delivery" value="ММ.ДД.ГГГГ">
+                <br>
+            </p>
+            <input type="submit" value="Отправить" id="submit">
+
+        </form>
+        <br>
+        {% if responce %}<p>{{responce}}</p>{% endif %}
+    </div>
+    <div id="request_status">
+        <h1>Запросить статус доставки</h1>
+        <form name="request_status" action="" method="post" onsubmit="">
+            <br>
+            <p>Текущий статус доставки:</p>
+            <br>
+            <input type="submit" value="Статус" name="status_button">
+            <br>
+            <br>
+            {% if status %}
+            <p>{{status}}</p>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>
